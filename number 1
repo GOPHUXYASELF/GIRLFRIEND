@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dream AI Girlfriend Builder</title>
+  <style>
+    body { font-family: sans-serif; background: #fdf0f5; text-align: center; padding: 2em; }
+    .builder { margin-top: 2em; }
+    label, select { display: block; margin: 1em auto; }
+    button { padding: 0.5em 1em; background: hotpink; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>✨ Build Your Dream AI Girlfriend ✨</h1>
+  <p>Customize her personality, style, and voice below.</p>
+
+  <div class="builder">
+    <label>Personality:
+      <select id="personality">
+        <option value="flirty">Flirty</option>
+        <option value="supportive">Supportive</option>
+        <option value="intellectual">Intellectual</option>
+      </select>
+    </label>
+
+    <label>Style:
+      <select id="style">
+        <option value="anime">Anime</option>
+        <option value="realistic">Realistic</option>
+      </select>
+    </label>
+
+    <label>Voice:
+      <select id="voice">
+        <option value="soft">Soft</option>
+        <option value="energetic">Energetic</option>
+      </select>
+    </label>
+
+    <button onclick="generateGirl()">Generate</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    function generateGirl() {
+      const p = document.getElementById('personality').value;
+      const s = document.getElementById('style').value;
+      const v = document.getElementById('voice').value;
+      document.getElementById('output').innerText = 
+        `Your AI girlfriend is ${p}, styled in ${s} visuals, with a ${v} voice.`;
+    }
+  </script>
+</body>
+</html>
